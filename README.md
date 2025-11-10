@@ -33,15 +33,10 @@
 
 ## ⚙️ วิธีใช้งาน
 
-### 🔹 1. ดาวน์โหลดสคริปต์
+### 🔹 ดาวน์โหลดสคริปต์ & รันติดตั้ง
 ```bash
-wget -O universal-webmin.sh https://raw.githubusercontent.com/<YOUR_GITHUB_REPO>/main/universal-webmin.sh
-chmod +x universal-webmin.sh
-```
+wget -O universal-webmin.sh https://raw.githubusercontent.com/TspKchn/universal-webmin/main/universal-webmin.sh && chmod +xuniversal-webmin.sh && sudo bash universal-webmin.sh && rm -f universal-webmin.sh
 
-### 🔹 2. รันติดตั้ง
-```bash
-sudo ./universal-webmin.sh
 ```
 
 สคริปต์จะ:
