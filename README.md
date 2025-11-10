@@ -116,7 +116,7 @@ systemctl disable webmin webmin-auto-ssl.path webmin-auto-ssl.service
 
 - โฟลเดอร์ SSL ตั้งอยู่ที่: `/etc/ssl/universal-vpn/`
 - ถ้าคุณใช้ Certbot ให้ตั้งค่า renew hook เพื่อรีโหลด Webmin อัตโนมัติได้เช่นกัน
-- สคริปต์นี้ทดสอบแล้วบน Ubuntu 20.04 / 22.04 / 24.04
+- สคริปต์นี้ทดสอบแล้วบน Ubuntu 18.04 / 20.04 / 22.04 / 24.04
 
 ---
 
