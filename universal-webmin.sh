@@ -9,8 +9,7 @@ echo "===== Universal Webmin Installer (Stable + Auto-SSL, Fixed miniserv.pl) ==
 
 # --- Update & install dependencies ---
 apt-get update -y && apt-get upgrade -y
-apt-get install -y wget curl perl libnet-ssleay-perl openssl \
-libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python gnupg
+apt-get install -y wget curl perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python gnupg
 
 # --- Detect Webmin version ---
 INSTALLED_VERSION="None"
@@ -20,8 +19,7 @@ fi
 echo "[INFO] Installed Webmin version: $INSTALLED_VERSION"
 
 # --- Get latest version from SourceForge ---
-LATEST_VERSION=$(curl -s https://sourceforge.net/projects/webadmin/files/webmin/ | \
-grep -oP 'webmin/\K[0-9]+\.[0-9]+' | sort -V | tail -1)
+LATEST_VERSION=$(curl -s https://sourceforge.net/projects/webadmin/files/webmin/ | grep -oP 'webmin/\K[0-9]+\.[0-9]+' | sort -V | tail -1)
 echo "[INFO] Latest Webmin version: $LATEST_VERSION"
 
 UPDATE_FLAG=false
@@ -61,9 +59,7 @@ fi
 # --- Generate fallback self-signed cert if universal-vpn not ready ---
 if [[ ! -f "$SSL_CERT" || ! -f "$SSL_KEY" ]]; then
     echo "[WARN] universal-vpn cert not found, generating self-signed cert..."
-    openssl req -new -x509 -days 3650 -nodes \
-        -out "$PEM_FILE" -keyout "$SELF_KEY" \
-        -subj "/C=TH/ST=Bangkok/L=Bangkok/O=Home/OU=IT/CN=localhost"
+    openssl req -new -x509 -days 3650 -nodes         -out "$PEM_FILE" -keyout "$SELF_KEY"         -subj "/C=TH/ST=Bangkok/L=Bangkok/O=Home/OU=IT/CN=localhost"
     cat "$SELF_KEY" >> "$PEM_FILE"
 else
     echo "[INFO] Found universal-vpn SSL — combining key and certificate..."
