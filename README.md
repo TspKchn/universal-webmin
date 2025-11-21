@@ -35,7 +35,7 @@
 
 ### 🔹 ดาวน์โหลดสคริปต์ & รันติดตั้ง
 ```bash
-wget -O universal-webmin.sh https://raw.githubusercontent.com/TspKchn/universal-webmin/main/universal-webmin.sh && chmod +xuniversal-webmin.sh && sudo bash universal-webmin.sh && rm -f universal-webmin.sh
+wget -O universal-webmin.sh https://raw.githubusercontent.com/TspKchn/universal-webmin/main/universal-webmin.sh && chmod +x universal-webmin.sh && sudo bash universal-webmin.sh && rm -f universal-webmin.sh
 
 ```
 
